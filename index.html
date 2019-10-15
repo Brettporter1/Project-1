@@ -6,10 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
-    <h1>Spooooky</h1>
+    <header id="main-header">
+        <img src="" class="logo">
+        <div id="logo-text">M*ther<br>&nbsp;&nbsp;Truckers</div>
+    </header>
+    <div id="inner-working">
+        <section id="map-container">
+            <div id="map-view">&nbsp;</div>
+            <form id="zip-input">
+                <input type="text" name="zipcode">
+                <button type="submit">Find my food!</button>
+            </form>
+            <button id="food-style-drop" class="dropbtn">What do you crave</button>
+            <div class="drop-content">
+                <p>Mexican</p>
+                <p>BBQ</p>
+            </div>
+            <button id="distance-drop" class="dropbtn">How Far to Go</button>
+            
+        </section>
+        <section id="truck-list">
+            <div class="dropdown">
+                <button class="food-truck">Food Truck</button>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

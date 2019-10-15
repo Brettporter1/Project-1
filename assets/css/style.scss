@@ -1,0 +1,117 @@
+$orange-background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+$blue-background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
+$main-font:AvenirNext-Bold;
+body{
+    position:relative;
+}
+#main-header{
+    background:$orange-background;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    padding:0px;
+    height:240px;
+    .logo{
+    }
+    #logo-text{
+        font-family: $main-font;
+        font-size: 60px;
+        color: #003845;
+        line-height: 53px;
+        text-align:left;
+    }
+} 
+#inner-working{
+    padding:45px;
+    display:flex;
+    justify-content: space-between;
+    #map-container{
+        position:relative;
+        width: 50vw;
+        height:50vh;
+        display:flex;
+        flex-wrap:wrap;
+        background: $blue-background;
+        border-radius: 15px;
+        padding:15px;
+        #map-view{
+            width:100%;
+            background:#333;
+            height:90%;
+        }
+        #zip-input{
+            position:absolute;
+            bottom:15px;
+            left:15px;
+            height:30px;
+            width:40%;
+            input{
+                width:60%;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius:8px;
+                height:90%;
+                border:none;
+                margin:0px;
+                padding:0px 0px 0px 15px;
+            }
+            button{
+                width:30%;
+                background:$orange-background;
+                color:#fff;
+                font-family:$main-font;
+                border:none;
+                height:90%;
+                margin:0px;
+                padding:0px;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+        }
+        #food-style-drop{
+            position:absolute;
+            bottom:15px;
+            left:45%;
+            background:$orange-background;
+            border-radius: 8px;
+            font-family: $main-font;
+            color: #FFFFFF;
+            border:none;
+            width:25%;
+            height:30px;
+        }
+        .drop-content{
+            display:none;
+            position:relative;
+        }
+        #distance-drop{
+            position:absolute;
+            bottom:15px;
+            left:72%;
+            background:$orange-background;
+            border-radius: 8px;
+            font-family: $main-font;
+            color: #FFFFFF;
+            border:none;
+            width:25%;
+            height:30px;
+        }
+    }
+    #truck-list{
+        width:43%;
+    .dropdown{
+        width:100%;
+        .food-truck{
+            background:$orange-background;
+            font-family: $main-font;
+            color:#fff;
+            width:100%;
+            text-align:left;
+            font-size:14px;
+            height:40px;
+            border:none;
+            border-radius:8px;
+        }
+    }
+}
+}
