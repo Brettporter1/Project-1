@@ -1,11 +1,18 @@
 $orange-background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
 $blue-background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
 $main-font:AvenirNext-Bold;
+
+*{
+    box-sizing: border-box;
+}
 body{
     position:relative;
+    margin: 0px;
+    padding:0px;
 }
 #main-header{
     background:$orange-background;
+    width:100vw;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -29,25 +36,26 @@ body{
     #map-container{
         position:relative;
         width: 50vw;
-        height:50vh;
         display:flex;
         flex-wrap:wrap;
+        justify-content: space-between;
         background: $blue-background;
         border-radius: 15px;
         padding:15px;
-        #map-view{
+        #map{
             width:100%;
             background:#333;
-            height:90%;
+            height:30vw;
         }
         #zip-input{
-            position:absolute;
-            bottom:15px;
-            left:15px;
+            position:relative;
+            display:flex;
+            justify-content: flex-start;
+            top:15px;
             height:30px;
-            width:40%;
+            width:100%;
             input{
-                width:60%;
+                width:75%;
                 border-top-left-radius: 8px;
                 border-bottom-left-radius:8px;
                 height:90%;
@@ -56,7 +64,7 @@ body{
                 padding:0px 0px 0px 15px;
             }
             button{
-                width:30%;
+                width:25%;
                 background:$orange-background;
                 color:#fff;
                 font-family:$main-font;
@@ -69,15 +77,14 @@ body{
             }
         }
         #food-style-drop{
-            position:absolute;
-            bottom:15px;
-            left:45%;
+            position:relative;
+            margin:20px 0px 0px;
             background:$orange-background;
             border-radius: 8px;
             font-family: $main-font;
             color: #FFFFFF;
             border:none;
-            width:25%;
+            width:48%;
             height:30px;
         }
         .drop-content{
@@ -85,15 +92,14 @@ body{
             position:relative;
         }
         #distance-drop{
-            position:absolute;
-            bottom:15px;
-            left:72%;
+            position:relative;
             background:$orange-background;
+            margin:20px 0px 0px;
             border-radius: 8px;
             font-family: $main-font;
             color: #FFFFFF;
             border:none;
-            width:25%;
+            width:48%;
             height:30px;
         }
     }
@@ -112,6 +118,23 @@ body{
             border:none;
             border-radius:8px;
         }
+        .active{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .drop-content{
+            display:none;
+            font-family: $main-font;
+            width:100%;
+            color:#fff;
+            background:$orange-background;
+            opacity: 0.8;
+            padding:10px;
+            p{
+                margin:0px;
+            }
+        }
     }
 }
+
 }
