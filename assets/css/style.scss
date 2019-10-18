@@ -53,6 +53,7 @@ body{
             display:flex;
             justify-content: flex-start;
             top:15px;
+            margin-bottom:15px;
             height:30px;
             width:100%;
             input{
@@ -69,6 +70,7 @@ body{
                 background:$orange-background;
                 color:#fff;
                 font-family:$main-font;
+                font-size:12px;
                 border:none;
                 height:90%;
                 margin:0px;
@@ -79,9 +81,10 @@ body{
         }
         #food-style-drop{
             position:relative;
-            margin:20px 0px 0px;
+            margin:15px 0px 0px;
             background:$orange-background;
             border-radius: 8px;
+            font-size:14px;
             font-family: $main-font;
             color: #FFFFFF;
             border:none;
@@ -91,9 +94,10 @@ body{
         #distance-drop{
             position:relative;
             background:$orange-background;
-            margin:20px 0px 0px;
+            margin:15px 0px 0px;
             border-radius: 8px;
             font-family: $main-font;
+            font-size:14px;
             color: #FFFFFF;
             border:none;
             width:100%;
@@ -124,8 +128,12 @@ button:hover{
     width:100%;
 }
 .active{
-    border-bottom-left-radius: 0px!important;
-    border-bottom-right-radius: 0px!important;
+    button{
+        border-bottom-left-radius: 0px!important;
+        border-bottom-right-radius: 0px!important;}
+    .drop-content{
+        display:block;
+    }
 }
 .drop-content{
     display:none;
@@ -142,3 +150,75 @@ button:hover{
     }
 }
 
+@media screen and (max-width:1200px){
+    #inner-working{
+        padding:45px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
+    #map-container{
+        width:80vw;
+        #map{
+            height:40vh;
+        }
+    }
+    #truck-list{
+        width:80vw;
+        margin:25px 0px;
+    }
+}
+@media screen and (max-width:760px){
+    #main-header{
+        height:140px;
+        #logo-text{
+            font-size: 30px;
+            line-height:26px;
+        }
+    }
+    #inner-working{
+        padding:15px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    #map-container{
+        width:100vw;
+        #map{
+            height:20vh;
+        }
+    }
+    #truck-list{
+        width:100vw;
+        margin:25px 0px;
+    }
+}
+@media screen and (max-width:600px){
+    #main-header{
+        height:140px;
+        #logo-text{
+            font-size: 30px;
+            line-height:26px;
+        }
+    }
+    #inner-working{
+        padding:15px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    #map-container{
+        width:100vw;
+        #map{
+            height:20vh;
+        }
+    }
+    #truck-list{
+        width:100vw;
+        margin:25px 0px;
+    }
+    .dropdown{
+        width:100%;
+    }
+}

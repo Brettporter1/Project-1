@@ -52,6 +52,7 @@ body {
   display: flex;
   justify-content: flex-start;
   top: 15px;
+  margin-bottom: 15px;
   height: 30px;
   width: 100%;
 }
@@ -69,6 +70,7 @@ body {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
   font-family: AvenirNext-Bold;
+  font-size: 12px;
   border: none;
   height: 90%;
   margin: 0px;
@@ -78,9 +80,10 @@ body {
 }
 #map-container #food-style-drop {
   position: relative;
-  margin: 20px 0px 0px;
+  margin: 15px 0px 0px;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   border-radius: 8px;
+  font-size: 14px;
   font-family: AvenirNext-Bold;
   color: #FFFFFF;
   border: none;
@@ -90,9 +93,10 @@ body {
 #map-container #distance-drop {
   position: relative;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
-  margin: 20px 0px 0px;
+  margin: 15px 0px 0px;
   border-radius: 8px;
   font-family: AvenirNext-Bold;
+  font-size: 14px;
   color: #FFFFFF;
   border: none;
   width: 100%;
@@ -127,9 +131,12 @@ button:hover {
   width: 100%;
 }
 
-.active {
+.active button {
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
+}
+.active .drop-content {
+  display: block;
 }
 
 .drop-content {
@@ -145,6 +152,87 @@ button:hover {
 }
 .drop-content p {
   margin: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  #inner-working {
+    padding: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #map-container {
+    width: 80vw;
+  }
+  #map-container #map {
+    height: 40vh;
+  }
+
+  #truck-list {
+    width: 80vw;
+    margin: 25px 0px;
+  }
+}
+@media screen and (max-width: 760px) {
+  #main-header {
+    height: 140px;
+  }
+  #main-header #logo-text {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  #inner-working {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #map-container {
+    width: 100vw;
+  }
+  #map-container #map {
+    height: 20vh;
+  }
+
+  #truck-list {
+    width: 100vw;
+    margin: 25px 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main-header {
+    height: 140px;
+  }
+  #main-header #logo-text {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  #inner-working {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #map-container {
+    width: 100vw;
+  }
+  #map-container #map {
+    height: 20vh;
+  }
+
+  #truck-list {
+    width: 100vw;
+    margin: 25px 0px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
