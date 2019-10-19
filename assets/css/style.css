@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,400,600,700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,11 @@ body {
   position: relative;
   margin: 0px;
   padding: 0px;
+  background: #333;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 #main-header {
@@ -18,117 +24,140 @@ body {
   padding: 0px;
   height: 240px;
 }
-#main-header #logo-text {
-  font-family: AvenirNext-Bold;
-  font-size: 60px;
-  color: #003845;
-  line-height: 53px;
-  text-align: left;
+#main-header .logo {
+  height: 70%;
 }
 
 #inner-working {
-  padding: 45px;
+  padding: 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 #map-container {
   position: relative;
-  width: 50vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
-  border-radius: 15px;
   padding: 15px;
 }
 #map-container #map {
-  width: 100%;
+  width: 50%;
   background: #333;
-  height: 30vw;
+  height: 35vw;
 }
-#map-container #zip-input {
+#map-container #food-filter {
+  width: 50%;
+  padding: 0px 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#map-container #food-filter #zip-input {
   position: relative;
   display: flex;
   justify-content: flex-start;
   top: 15px;
   margin-bottom: 15px;
-  height: 30px;
+  height: 45px;
   width: 100%;
 }
-#map-container #zip-input input {
+#map-container #food-filter #zip-input input {
   width: 75%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  height: 90%;
+  font-size: 18px;
+  height: 100%;
   border: none;
   margin: 0px;
   padding: 0px 0px 0px 15px;
 }
-#map-container #zip-input button {
+#map-container #food-filter #zip-input button {
   width: 25%;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
-  font-family: AvenirNext-Bold;
-  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
   border: none;
-  height: 90%;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-#map-container #food-style-drop {
+#map-container #food-filter #food-style-drop {
   position: relative;
-  margin: 15px 0px 0px;
+  margin: 0px 0px 0px;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   border-radius: 8px;
-  font-size: 14px;
-  font-family: AvenirNext-Bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
   color: #FFFFFF;
   border: none;
   width: 100%;
-  height: 30px;
+  height: 45px;
 }
-#map-container #distance-drop {
+#map-container #food-filter #distance-drop {
   position: relative;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   margin: 15px 0px 0px;
+  text-transform: uppercase;
   border-radius: 8px;
-  font-family: AvenirNext-Bold;
-  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
   color: #FFFFFF;
   border: none;
   width: 100%;
-  height: 30px;
+  height: 45px;
 }
 
 #truck-list {
-  width: 43%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .food-truck {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
-  font-family: AvenirNext-Bold;
+  padding: 20px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
   width: 100%;
   text-align: left;
-  font-size: 14px;
-  height: 40px;
+  font-size: 24px;
+  height: 125px;
+  letter-spacing: 1px;
   border: none;
-  border-radius: 8px;
+  font-family: "Luckiest Guy", "Open Sans", sans-serif;
+}
+
+.distance-away {
+  font-family: "Open Sans", sans-serif;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
-.dropdown {
-  width: 48%;
+.truck-dropdown {
+  width: 50%;
 }
 
-.truck-dropdown {
-  width: 100%;
+.inactive .drop-content {
+  display: none;
 }
 
 .active button {
@@ -137,41 +166,144 @@ button:hover {
 }
 .active .drop-content {
   display: block;
+  position: absolute;
+  z-index: 100;
 }
 
 .drop-content {
   display: none;
-  font-family: AvenirNext-Bold;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   color: #fff;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   opacity: 0.9;
   padding: 10px;
-  border-bottom-left-radius: 8px !important;
-  border-bottom-right-radius: 8px !important;
 }
 .drop-content p {
   margin: 0px;
 }
 
+.modal-content {
+  background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+  color: #fff;
+  width: 700px;
+  height: 550px;
+  margin: 20% auto;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  animation-name: modal-render;
+  animation-duration: 1s;
+}
+
+.closeBtn {
+  opacity: 0.8;
+  font-size: 3em;
+  float: right;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+#food-style-modal {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#radius-modal {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 @media screen and (max-width: 1200px) {
   #inner-working {
-    padding: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   #map-container {
-    width: 80vw;
+    width: 100vw;
   }
   #map-container #map {
+    width: 100%;
     height: 40vh;
   }
+  #map-container #food-filter {
+    width: 100%;
+    padding: 15px 0px 0px;
+    display: block;
+  }
+  #map-container #food-filter #zip-input {
+    position: relative;
+  }
+  #map-container #food-filter #zip-input input {
+    width: 65%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+  }
+  #map-container #food-filter #zip-input button {
+    width: 35%;
+    background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  #map-container #food-filter .dropbtn {
+    position: relative;
+    margin: 15px 0px 0px;
+    background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 960px) {
+  #map-container {
+    width: 100vw;
+  }
+  #map-container #zip-input {
+    width: 100%;
+  }
+  #map-container #food-style-drop {
+    width: 49%;
+  }
+  #map-container #distance-drop {
+    width: 49%;
+  }
 
-  #truck-list {
-    width: 80vw;
-    margin: 25px 0px;
+  .truck-dropdown {
+    width: 100%;
   }
 }
 @media screen and (max-width: 760px) {
@@ -184,7 +316,7 @@ button:hover {
   }
 
   #inner-working {
-    padding: 15px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -192,14 +324,37 @@ button:hover {
 
   #map-container {
     width: 100vw;
+    border-radius: 0px;
   }
   #map-container #map {
-    height: 20vh;
+    height: 30vh;
+  }
+  #map-container #zip-input {
+    height: 45px;
+    width: 100%;
+  }
+  #map-container #zip-input input {
+    width: 75%;
+  }
+  #map-container #zip-input button {
+    width: 25%;
   }
 
-  #truck-list {
+  .modal-content {
     width: 100vw;
-    margin: 25px 0px;
+    height: 100vh;
+    margin: 0;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    animation-name: modal-render;
+    animation-duration: 1s;
+  }
+
+  .closeBtn {
+    font-size: 4em;
+  }
+
+  button:hover {
+    opacity: 1;
   }
 }
 @media screen and (max-width: 600px) {
@@ -212,7 +367,7 @@ button:hover {
   }
 
   #inner-working {
-    padding: 15px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -220,18 +375,38 @@ button:hover {
 
   #map-container {
     width: 100vw;
+    border-radius: 0px;
   }
   #map-container #map {
-    height: 20vh;
+    height: 30vh;
   }
-
-  #truck-list {
-    width: 100vw;
-    margin: 25px 0px;
-  }
-
-  .dropdown {
+  #map-container #zip-input {
+    height: 45px;
     width: 100%;
+  }
+  #map-container #zip-input input {
+    width: 55%;
+  }
+  #map-container #zip-input button {
+    width: 45%;
+  }
+  #map-container #food-style-drop {
+    width: 100%;
+  }
+  #map-container #distance-drop {
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+}
+@keyframes modal-render {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
