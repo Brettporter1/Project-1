@@ -147,9 +147,9 @@ button:hover{
     border:none;
     font-family: 'Luckiest Guy','Open Sans', sans-serif;
 }
-.distance-away{
-    font-family:'Open Sans', sans-serif;
-}
+// .distance-away{
+//     font-family:'Open Sans', sans-serif;
+// }
 button:hover{
     opacity:0.9;
 }
@@ -219,6 +219,17 @@ button:hover{
     background-color:rgba(0,0,0,0.6);
 }
 #radius-modal{
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgba(0,0,0,0.6);
+}
+#truck-modal{
     display:none;
     position:fixed;
     top:0px;
