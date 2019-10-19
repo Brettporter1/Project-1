@@ -17,16 +17,16 @@
         <section id="map-container">
             <div id="map">&nbsp;</div>
             <div id="food-filter">
-            <button id="food-style-drop" class="dropbtn">What do you crave</button>
-            <button id="distance-drop" class="dropbtn">How Far to Go</button> 
-            <form id="zip-input">
-                <input type="text" name="zipcode" placeholder="Current Location">
-                <button type="submit">Find my food!</button>
-            </form>
-        </div>
+                <button id="food-style-drop" class="dropbtn">What do you crave</button>
+                <button id="distance-drop" class="dropbtn">How Far to Go</button>
+                <form id="zip-input">
+                    <input type="text" name="zipcode" placeholder="Current Location">
+                    <button type="submit">Find my food!</button>
+                </form>
+            </div>
         </section>
         <section id="truck-list">
-            <div class="truck-dropdown">
+            <!-- <div class="truck-dropdown">
                 <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
                 <div class="drop-content">
                 </div>
@@ -35,7 +35,7 @@
                 <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
                 <div class="drop-content">
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="truck-dropdown">
                 <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
                 <div class="drop-content">
@@ -47,22 +47,36 @@
                 </div>
             </div> -->
         </section>
-        
+
     </div>
     <!-- My popup modals -->
     <div id="food-style-modal">
         <div class="modal-content">
-                <span class="closeBtn">&times;</span>
-                <h2>What are you craving?</h2>
+            <span class="closeBtn">&times;</span>
+            <h2>What are you craving?</h2>
         </div>
     </div>
     <div id="radius-modal">
         <div class="modal-content">
-                <span class="closeBtn">&times;</span>
+            <span class="closeBtn">&times;</span>
         </div>
-    </div> 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MLKObQg-mZbMtVZr7NTtp5X9yziH2ZU
+            &libraries=visualization&callback=initMap">
+            </script>
     <script src="assets/js/app.js"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <!-- <script src="./assets/js/auth.js"></script> -->
+    <script src="./assets/js/geolocate.js"></script>
+    <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/list.js"></script>
 </body>
 
 </html>
