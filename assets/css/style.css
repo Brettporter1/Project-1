@@ -14,6 +14,10 @@ button:hover {
   opacity: 0.8;
 }
 
+button:focus {
+  outline: none;
+}
+
 #main-header {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
@@ -26,6 +30,49 @@ button:hover {
 }
 #main-header .logo {
   height: 70%;
+}
+#main-header #user-drop {
+  position: absolute;
+  right: 25px;
+}
+#main-header #user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #003845;
+  cursor: pointer;
+}
+#main-header #user-info h2 {
+  margin: 15px;
+  font-family: "Luckiest Guy", "Open Sans", sans-serif;
+}
+#main-header #user-logout {
+  color: #003845;
+}
+#main-header #user-logout:hover {
+  color: #fff;
+  cursor: pointer;
+}
+#main-header #user-drop-content {
+  display: none;
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  opacity: 0.9;
+  padding: 0px;
+  top: 40px;
+}
+#main-header #user-info:hover {
+  color: #fff;
+}
+#main-header #user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 #inner-working {
@@ -123,7 +170,7 @@ button:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -135,7 +182,7 @@ button:hover {
   align-items: flex-start;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  width: 100%;
+  width: 50%;
   text-align: left;
   font-size: 24px;
   height: 125px;
@@ -148,32 +195,17 @@ button:hover {
   opacity: 0.9;
 }
 
-.truck-dropdown {
-  width: 50%;
-}
-
-.inactive .drop-content {
-  display: none;
-}
-
-.active button {
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-.active .drop-content {
-  display: block;
-  position: absolute;
-  z-index: 100;
-}
-
 .drop-content {
   display: none;
+  position: absolute;
   font-family: "Open Sans", sans-serif;
+  text-align: center;
   width: 100%;
   color: #fff;
-  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  background: transparent;
   opacity: 0.9;
-  padding: 10px;
+  padding: 0px;
+  top: 70px;
 }
 .drop-content p {
   margin: 0px;
@@ -383,6 +415,22 @@ button:hover {
   }
 }
 @media screen and (max-width: 960px) {
+  #main-header {
+    background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    height: 240px;
+  }
+  #main-header .logo {
+    height: 70%;
+    position: relative;
+    left: 25px;
+  }
+
   #map-container {
     width: 100vw;
   }
@@ -396,7 +444,7 @@ button:hover {
     width: 49%;
   }
 
-  .truck-dropdown {
+  .food-truck {
     width: 100%;
   }
 }
@@ -407,6 +455,16 @@ button:hover {
   #main-header #logo-text {
     font-size: 30px;
     line-height: 26px;
+  }
+  #main-header #user-info {
+    flex-direction: column;
+  }
+  #main-header #user-info h2 {
+    font-size: 1.2em;
+  }
+  #main-header #user-image {
+    width: 50px;
+    height: 50px;
   }
 
   #inner-working {

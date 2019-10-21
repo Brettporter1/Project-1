@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>M*ther Truckers</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    
 </head>
 
 <body>
     <header id="main-header">
         <img src="./assets/images/MotherTruckers_Logo.png" class="logo">
+        <div id="user-drop"><div id="user-info">
+            <img id="user-image" src="https://via.placeholder.com/150.png">
+            <h2 id="user-name">user-name</h2>
+        </div>
+            <div id="user-drop-content">
+                <h3 id="user-logout">Logout</h3>
+            </div>
+        </div>
     </header>
     <div id="inner-working">
         <section id="map-container">
@@ -26,26 +35,8 @@
             </div>
         </section>
         <section id="truck-list">
-            <!-- <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div>
-            <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div> -->
-            <!-- <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div>
-            <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div> -->
+                <!-- <button class="food-truck"><span>Food Truck</span><span class="distance-away">2.4 miles</span></button>
+                <button class="food-truck"><span>Food Truck</span><span class="distance-away">2.4 miles</span></button> -->
         </section>
 
     </div>
@@ -59,7 +50,8 @@
     <div id="radius-modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
-                <h2>How far are you willing to go?</h2>
+            <h2>How far are you willing to go?</h2>
+            
         </div>
     </div>
     <div id="truck-modal">
@@ -68,9 +60,7 @@
             <h2>Food Truck</h2>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
@@ -81,12 +71,13 @@
                 
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
     <script src="./assets/js/firebase.js"></script>
     <!-- <script src="./assets/js/auth.js"></script> -->
     <script src="./assets/js/geolocate.js"></script>
     <script src="./assets/js/map.js"></script>
     <script src="./assets/js/list.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <!-- <script src="./assets/js/load.js"></script> -->
 </body>
 
 </html>
