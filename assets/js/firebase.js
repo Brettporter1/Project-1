@@ -11,3 +11,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var db = firebase.firestore();
+// Create a GeoFirestore reference
+const geofirestore = new GeoFirestore(db);
+// Create a GeoCollection reference
+const geocollection = geofirestore.collection('trucks');
+// Create a GeoQuery based on a location
