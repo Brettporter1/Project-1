@@ -5,7 +5,7 @@ $main-font:'Open Sans',sans-serif;
 
 *{
     box-sizing: border-box;
-    
+    font-family: $main-font;
 }
 body{
     position:relative;
@@ -23,12 +23,21 @@ button:hover{
     align-items: center;
     justify-content: center;
     margin:0px;
-    padding:0px;
-    height:240px;
+    padding:0px 20px;
+    height:70px;
     .logo{
-        height:70%;
+        height:50px;
+        margin-right: auto;
     }
-    
+    .header-account-btn{
+        display: none;
+    }
+    .header-btn{
+        background: #FFF;
+        border: none;
+        padding: 5px 10px;
+        border-radius:3px;
+    }
 } 
 #inner-working{
     padding:0px;
@@ -43,7 +52,7 @@ button:hover{
         flex-wrap:wrap;
         justify-content: space-between;
         background: $blue-background;
-        padding:15px;
+        padding:0px;
         #map{
             width:50%;
             background:#333;
@@ -51,13 +60,13 @@ button:hover{
         }
         #food-filter{
             width:50%;
-            padding:0px 15px 15px;
+            padding:15px;
             display:flex;
             flex-wrap:wrap;
             align-content: center;
             
         
-            #zip-input{
+            #address-input{
                 position:relative;
                 display:flex;
                 justify-content: flex-start;
@@ -66,7 +75,7 @@ button:hover{
                 height:45px;
                 width:100%;
                 input{
-                    width:75%;
+                    width:100%;
                     border-top-left-radius: 8px;
                     border-bottom-left-radius:8px;
                     font-size:18px;
@@ -130,6 +139,7 @@ button:hover{
     flex-wrap:wrap;
     justify-content: space-around;
     align-items: flex-start;
+    padding-top: 5px;
 }
 .food-truck{
     background:$orange-background;
@@ -146,10 +156,12 @@ button:hover{
     letter-spacing: 1px;
     border:none;
     font-family: 'Luckiest Guy','Open Sans', sans-serif;
+    margin: 5px 10px;
+    border-radius: 5px;
 }
-// .distance-away{
-//     font-family:'Open Sans', sans-serif;
-// }
+.distance-away{
+    font-family:'Open Sans', sans-serif;
+}
 button:hover{
     opacity:0.9;
 }
@@ -191,8 +203,8 @@ button:hover{
     padding:20px;
     color:#fff;
     width:700px;
-    height:550px;
-    margin:20% auto;
+    // height:550px;
+    margin:0 auto;
     box-shadow:0 5px 12px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.15);
     animation-name:modal-render;
     animation-duration:1s;
@@ -207,36 +219,16 @@ button:hover{
     color:#000;
     cursor:pointer;
 }
-#food-style-modal{
+
+.modal{
     display:none;
+    align-items: center;
     position:fixed;
     top:0px;
     left:0px;
     z-index:1000;
     width:100%;
-    height:100%;
-    overflow:auto;
-    background-color:rgba(0,0,0,0.6);
-}
-#radius-modal{
-    display:none;
-    position:fixed;
-    top:0px;
-    left:0px;
-    z-index:1000;
-    width:100%;
-    height:100%;
-    overflow:auto;
-    background-color:rgba(0,0,0,0.6);
-}
-#truck-modal{
-    display:none;
-    position:fixed;
-    top:0px;
-    left:0px;
-    z-index:1000;
-    width:100%;
-    height:100%;
+    height:100vh;
     overflow:auto;
     background-color:rgba(0,0,0,0.6);
 }
@@ -354,16 +346,15 @@ button:hover{
         }
         #food-filter{
             width:100%;
-            padding:15px 0px 0px;
             display:block;
         
-            #zip-input{
+            #address-input{
                 position:relative;
                 
                 input{
-                    width:65%;
-                    border-top-left-radius: 8px;
-                    border-bottom-left-radius:8px;
+                    width:100%;
+                    border-radius: 8px;
+                    
                     height:100%;
                     border:none;
                     margin:0px;
@@ -402,7 +393,7 @@ button:hover{
     #map-container{
         width:100vw;
         
-        #zip-input{
+        #address-input{
         width:100%;
     }
     #food-style-drop{
@@ -419,7 +410,10 @@ button:hover{
 }
 @media screen and (max-width:760px){
     #main-header{
-        height:140px;
+        height:50px;
+        .logo{
+            height: 30px;
+        }
         #logo-text{
             font-size: 30px;
             line-height:26px;
@@ -438,7 +432,7 @@ button:hover{
         #map{
             height:30vh;
         }
-        #zip-input{
+        #address-input{
             
             height:45px;
             width:100%;
@@ -469,12 +463,16 @@ button:hover{
 
 @media screen and (max-width:600px){
     #main-header{
-        height:140px;
+        height:50px;
+        .logo{
+            height: 30px;
+        }
         #logo-text{
             font-size: 30px;
             line-height:26px;
         }
     }
+    
     #inner-working{
         padding:0px;
         display:flex;
@@ -484,10 +482,11 @@ button:hover{
     #map-container{
         width:100vw;
         border-radius:0px;
+        padding: 0;
         #map{
             height:30vh;
         }
-        #zip-input{
+        #address-input{
             
             height:45px;
             width:100%;
@@ -504,6 +503,9 @@ button:hover{
         #distance-drop{
             width: 100%;
         }
+        #food-filter{
+            padding: 20px;
+        }
     }
  
     button:hover{
@@ -514,4 +516,37 @@ button:hover{
 @keyframes modal-render{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+
+///forms
+
+#log-in-modal, #sign-up-modal {
+    form{
+        display: block;
+        margin: 10px auto;
+        input{
+            display: block;
+        }
+    }
+
+}
+
+//// Account Menu
+
+.account-menu{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #FFF;
+    z-index: 2000;
+    width: 30vh;
+    display: none;
+    button{
+        margin-top: 20px;
+    }
+
 }

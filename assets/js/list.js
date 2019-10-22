@@ -1,24 +1,35 @@
-var db = firebase.firestore();
+var radius = 15;
 
 var truckData;
 
-db.collection('trucks')
-  .get()
-  .then(querySnapshot => {
+function queryTrucks() {
+  query = geocollection.near({
+    center: new firebase.firestore.GeoPoint(userPos.lat, userPos.lng),
+    radius: radius * 1.609,
+  });
+  query.get().then(querySnapshot => {
     truckData = querySnapshot;
+    console.log(truckData);
+    document.querySelector('#truck-list').innerHTML = '';
+    const listHeader = document.createElement('p');
+    listHeader.textContent = `We found ${
+      querySnapshot.docs.length
+    } food trucks within ${radius} miles`;
+    document.querySelector('#truck-list').appendChild(listHeader);
     querySnapshot.forEach(doc => {
       console.log(`${doc.id} => ${doc.data().name}`);
+      console.log(doc.data());
       const listing = document.createElement('button');
       listing.classList.add('food-truck');
       const listingName = document.createElement('span');
       listingName.textContent = doc.data().name;
       listing.appendChild(listingName);
-      //   const listingPhone = document.createElement('div');
-      //   listingPhone.textContent = doc.data().phoneNumber;
-      //   listing.appendChild(listingPhone);
 
       document.querySelector('#truck-list').append(listing);
-      const truckPos = { lat: +doc.data().lat, lng: +doc.data().lon };
+      const truckPos = {
+        lat: +doc.data().coordinates.latitude,
+        lng: +doc.data().coordinates.longitude,
+      };
       // / calculate distances
 
       const distance = document.createElement('span');
@@ -30,9 +41,23 @@ db.collection('trucks')
       listing.appendChild(distance);
 
       console.log(distance.textContent);
-      initMap();
+      const icon = {
+        url: './assets/images/MT_truck_marker-01.svg', // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(25, 50), // anchor
+      };
+      const marker = new google.maps.Marker({
+        position: truckPos,
+        map,
+        title: doc.data().name,
+        icon,
+      });
+
+      markers.push(marker);
     });
   });
+}
 
 function calcDistance(origin, destination, element) {
   var service = new google.maps.DistanceMatrixService();
@@ -56,3 +81,5 @@ function calcDistance(origin, destination, element) {
     }
   );
 }
+
+// queryTrucks();

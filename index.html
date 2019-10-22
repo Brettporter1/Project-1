@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Motha Truckers</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
     <header id="main-header">
         <img src="./assets/images/MotherTruckers_Logo.png" class="logo">
+        <div class="header-btn-group">
+            <button class="header-btn" id="log-in-btn">Log in</button>
+            <button class="header-btn" id="sign-up-btn">Sign Up</button>
+        </div>
+        <button class="header-account-btn" id="header-account-btn"></button>
     </header>
+    <div class="account-menu">
+        <button id="close-account-button">X</button>
+        <button class="fav-btn">My Favorites</button>
+        <button class="set my location">Set Location</button>
+        <button class="sign-out-button">Sign Out</button>
+    </div>
+
     <div id="inner-working">
         <section id="map-container">
             <div id="map">&nbsp;</div>
             <div id="food-filter">
                 <button id="food-style-drop" class="dropbtn">What do you crave</button>
                 <button id="distance-drop" class="dropbtn">How Far to Go</button>
-                <form id="zip-input">
-                    <input type="text" name="zipcode" placeholder="Current Location">
-                    <button type="submit">Find my food!</button>
+                <form id="address-input">
+                    <input type="text" name="zipcode" id="location-input" placeholder="Current Location">
+                    <!-- <button type="submit">Find my food!</button> -->
                 </form>
             </div>
         </section>
@@ -30,37 +42,86 @@
                 <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
                 <div class="drop-content">
                 </div>
-            </div>
-            <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
             </div> -->
-            <!-- <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div>
-            <div class="truck-dropdown">
-                <button class="food-truck">Food Truck<span class="distance-away">2.4 miles</span></button>
-                <div class="drop-content">
-                </div>
-            </div> -->
+
         </section>
 
     </div>
     <!-- My popup modals -->
-    <div id="food-style-modal">
+    <div id="food-style-modal" class="modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
             <h2>What are you craving?</h2>
         </div>
     </div>
-    <div id="radius-modal">
+    <div id="radius-modal" class="modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
+            <h2>How far are you willing to go?</h2>
+            <form action="#" id="distance">
+                <label for="miles">Miles</label>
+                <input type="number" name="miles" id="miles">
+                <button type="submit">Go!</button>
+            </form>
+
         </div>
     </div>
+    <div id="add-truck-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <form id="add-truck" action="#">
+                <label for="truck-name">Truck Name</label>
+                <input id="truck-name" type="text">
+                <label for="truck-lat">Latitude</label>
+                <input id="truck-lat" type="text">
+                <label for="truck-lng">Longitude</label>
+                <input id="truck-lng" type="text">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <div id="truck-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2>Food Truck</h2>
+        </div>
+    </div>
+
+    <div id="sign-up-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <div class="auth">
+                <form class="sign-up" action="#">
+                    <h3>Sign up</h3>
+                    <label for="su-email">Email</label>
+                    <input type="text" id="su-email">
+                    <label for="su-password">Password</label>
+                    <input type="password" id="su-password">
+                    <label for="cf-password">Confirm Password</label>
+                    <input type="password" id="cf-password">
+                    <button type="submit">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div id="log-in-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <form class="sign-in" action="#">
+                <h3>Sign in</h3>
+                <label for="si-email">Email</label>
+                <input type="text" id="si-email">
+                <label for="si-password">Password</label>
+                <input type="password" id="si-password">
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MLKObQg-mZbMtVZr7NTtp5X9yziH2ZU
+            &libraries=visualization,places">
+            </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -68,26 +129,20 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MLKObQg-mZbMtVZr7NTtp5X9yziH2ZU
-            &libraries=visualization&callback=initMap">
-            </script>
-                <span class="closeBtn">&times;</span>
-                <h2>How far are you willing to go?</h2>
-        </div>
-    </div> 
-    <div id="truck-modal">
-        <div class="modal-content">
-            <span class="closeBtn">&times;</span>
-            <h2>Food Truck</h2>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="https://unpkg.com/geofirestore/dist/geofirestore.js"></script>
+    <script src="https://unpkg.com/geokit@0.1.2/dist/geokit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/firebase.js"></script>
-    <!-- <script src="./assets/js/auth.js"></script> -->
+    <script src="./assets/js/auth.js"></script>
     <script src="./assets/js/geolocate.js"></script>
+    <script src="./assets/js/mapStyles.js"></script>
     <script src="./assets/js/map.js"></script>
     <script src="./assets/js/list.js"></script>
+    <script src="./assets/js/addTruck.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

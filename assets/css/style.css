@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,400,600,700&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -17,56 +19,97 @@ button:hover {
 #main-header {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px;
-  padding: 0px;
-  height: 240px;
+  padding: 0px 20px;
+  height: 70px;
 }
+
 #main-header .logo {
-  height: 70%;
+  height: 50px;
+  margin-right: auto;
+}
+
+#main-header .header-account-btn {
+  display: none;
+}
+
+#main-header .header-btn {
+  background: #FFF;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 
 #inner-working {
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #map-container {
   position: relative;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
-  padding: 15px;
+  padding: 0px;
 }
+
 #map-container #map {
   width: 50%;
   background: #333;
   height: 35vw;
 }
+
 #map-container #food-filter {
   width: 50%;
-  padding: 0px 15px 15px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
-#map-container #food-filter #zip-input {
+
+#map-container #food-filter #address-input {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   top: 15px;
   margin-bottom: 15px;
   height: 45px;
   width: 100%;
 }
-#map-container #food-filter #zip-input input {
-  width: 75%;
+
+#map-container #food-filter #address-input input {
+  width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   font-size: 18px;
@@ -75,7 +118,8 @@ button:hover {
   margin: 0px;
   padding: 0px 0px 0px 15px;
 }
-#map-container #food-filter #zip-input button {
+
+#map-container #food-filter #address-input button {
   width: 25%;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
@@ -90,6 +134,7 @@ button:hover {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
 #map-container #food-filter #food-style-drop {
   position: relative;
   margin: 0px 0px 0px;
@@ -104,6 +149,7 @@ button:hover {
   width: 100%;
   height: 45px;
 }
+
 #map-container #food-filter #distance-drop {
   position: relative;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
@@ -121,18 +167,31 @@ button:hover {
 
 #truck-list {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 5px;
 }
 
 .food-truck {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   padding: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   width: 100%;
@@ -141,7 +200,13 @@ button:hover {
   height: 125px;
   letter-spacing: 1px;
   border: none;
-  font-family: "Luckiest Guy", "Open Sans", sans-serif;
+  font-family: 'Luckiest Guy','Open Sans', sans-serif;
+  margin: 5px 10px;
+  border-radius: 5px;
+}
+
+.distance-away {
+  font-family: 'Open Sans', sans-serif;
 }
 
 button:hover {
@@ -160,6 +225,7 @@ button:hover {
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
 }
+
 .active .drop-content {
   display: block;
   position: absolute;
@@ -175,6 +241,7 @@ button:hover {
   opacity: 0.9;
   padding: 10px;
 }
+
 .drop-content p {
   margin: 0px;
 }
@@ -185,11 +252,13 @@ button:hover {
   padding: 20px;
   color: #fff;
   width: 700px;
-  height: 550px;
-  margin: 20% auto;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  animation-name: modal-render;
-  animation-duration: 1s;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-animation-name: modal-render;
+          animation-name: modal-render;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .closeBtn {
@@ -203,48 +272,33 @@ button:hover {
   cursor: pointer;
 }
 
-#food-style-modal {
+.modal {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 1000;
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-#radius-modal {
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-#truck-modal {
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 #register {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: AvenirNext-Bold;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px;
   padding: 0px;
   height: 240px;
@@ -327,11 +381,15 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
   #inner-working {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
   }
@@ -341,22 +399,20 @@ button:hover {
   }
   #map-container #food-filter {
     width: 100%;
-    padding: 15px 0px 0px;
     display: block;
   }
-  #map-container #food-filter #zip-input {
+  #map-container #food-filter #address-input {
     position: relative;
   }
-  #map-container #food-filter #zip-input input {
-    width: 65%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  #map-container #food-filter #address-input input {
+    width: 100%;
+    border-radius: 8px;
     height: 100%;
     border: none;
     margin: 0px;
     padding: 0px 0px 0px 15px;
   }
-  #map-container #food-filter #zip-input button {
+  #map-container #food-filter #address-input button {
     width: 35%;
     background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
     color: #fff;
@@ -382,11 +438,12 @@ button:hover {
     height: 45px;
   }
 }
+
 @media screen and (max-width: 960px) {
   #map-container {
     width: 100vw;
   }
-  #map-container #zip-input {
+  #map-container #address-input {
     width: 100%;
   }
   #map-container #food-style-drop {
@@ -395,27 +452,33 @@ button:hover {
   #map-container #distance-drop {
     width: 49%;
   }
-
   .truck-dropdown {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 760px) {
   #main-header {
-    height: 140px;
+    height: 50px;
+  }
+  #main-header .logo {
+    height: 30px;
   }
   #main-header #logo-text {
     font-size: 30px;
     line-height: 26px;
   }
-
   #inner-working {
     padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
     border-radius: 0px;
@@ -423,65 +486,73 @@ button:hover {
   #map-container #map {
     height: 30vh;
   }
-  #map-container #zip-input {
+  #map-container #address-input {
     height: 45px;
     width: 100%;
   }
-  #map-container #zip-input input {
+  #map-container #address-input input {
     width: 75%;
   }
-  #map-container #zip-input button {
+  #map-container #address-input button {
     width: 25%;
   }
-
   .modal-content {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-    animation-name: modal-render;
-    animation-duration: 1s;
+    -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-animation-name: modal-render;
+            animation-name: modal-render;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
-
   .closeBtn {
     font-size: 4em;
   }
-
   button:hover {
-    opacity: 1;
+    opacity: 1.0;
   }
 }
+
 @media screen and (max-width: 600px) {
   #main-header {
-    height: 140px;
+    height: 50px;
+  }
+  #main-header .logo {
+    height: 30px;
   }
   #main-header #logo-text {
     font-size: 30px;
     line-height: 26px;
   }
-
   #inner-working {
     padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
     border-radius: 0px;
+    padding: 0;
   }
   #map-container #map {
     height: 30vh;
   }
-  #map-container #zip-input {
+  #map-container #address-input {
     height: 45px;
     width: 100%;
   }
-  #map-container #zip-input input {
+  #map-container #address-input input {
     width: 55%;
   }
-  #map-container #zip-input button {
+  #map-container #address-input button {
     width: 45%;
   }
   #map-container #food-style-drop {
@@ -490,11 +561,23 @@ button:hover {
   #map-container #distance-drop {
     width: 100%;
   }
-
+  #map-container #food-filter {
+    padding: 20px;
+  }
   button:hover {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes modal-render {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
+
 @keyframes modal-render {
   from {
     opacity: 0;
@@ -504,4 +587,34 @@ button:hover {
   }
 }
 
+#log-in-modal form, #sign-up-modal form {
+  display: block;
+  margin: 10px auto;
+}
+
+#log-in-modal form input, #sign-up-modal form input {
+  display: block;
+}
+
+.account-menu {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background: #FFF;
+  z-index: 2000;
+  width: 30vh;
+  display: none;
+}
+
+.account-menu button {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=style.css.map */
