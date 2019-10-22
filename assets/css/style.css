@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,400,600,700&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -19,95 +18,77 @@ button:hover {
 #main-header {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0px;
   padding: 0px 20px;
   height: 70px;
 }
-
 #main-header .logo {
   height: 50px;
   margin-right: auto;
 }
-
 #main-header .header-account-btn {
   display: none;
 }
-
 #main-header .header-btn {
-  background: #FFF;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
+  background: transparent;
+  border: 2px solid #003845;
+  padding: 0px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #003845;
+  height: auto;
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 42px;
+  margin: 10px;
+  width: 120px;
+}
+#main-header .header-btn:hover, #main-header .header-btn:focus {
+  background: #003845;
+  color: #fff;
+  transition: 0.3s;
 }
 
 #inner-working {
   padding: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #map-container {
   position: relative;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
   padding: 0px;
 }
-
 #map-container #map {
   width: 50%;
   background: #333;
   height: 35vw;
 }
-
 #map-container #food-filter {
   width: 50%;
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
-
 #map-container #food-filter #address-input {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   top: 15px;
   margin-bottom: 15px;
   height: 45px;
   width: 100%;
 }
-
 #map-container #food-filter #address-input input {
   width: 100%;
   border-top-left-radius: 8px;
@@ -118,7 +99,6 @@ button:hover {
   margin: 0px;
   padding: 0px 0px 0px 15px;
 }
-
 #map-container #food-filter #address-input button {
   width: 25%;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
@@ -134,7 +114,6 @@ button:hover {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 #map-container #food-filter #food-style-drop {
   position: relative;
   margin: 0px 0px 0px;
@@ -149,7 +128,6 @@ button:hover {
   width: 100%;
   height: 45px;
 }
-
 #map-container #food-filter #distance-drop {
   position: relative;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
@@ -167,31 +145,19 @@ button:hover {
 
 #truck-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
   padding-top: 5px;
 }
 
 .food-truck {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   padding: 20px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   width: 100%;
@@ -200,13 +166,12 @@ button:hover {
   height: 125px;
   letter-spacing: 1px;
   border: none;
-  font-family: 'Luckiest Guy','Open Sans', sans-serif;
   margin: 5px 10px;
   border-radius: 5px;
 }
 
 .distance-away {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 button:hover {
@@ -225,7 +190,6 @@ button:hover {
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
 }
-
 .active .drop-content {
   display: block;
   position: absolute;
@@ -241,7 +205,6 @@ button:hover {
   opacity: 0.9;
   padding: 10px;
 }
-
 .drop-content p {
   margin: 0px;
 }
@@ -253,12 +216,107 @@ button:hover {
   color: #fff;
   width: 700px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  -webkit-animation-name: modal-render;
-          animation-name: modal-render;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  animation-name: modal-render;
+  animation-duration: 1s;
+}
+.modal-content #distance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content #distance label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content #distance input {
+  height: 45px;
+  width: 50%;
+  border-radius: 8px;
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 18px;
+}
+.modal-content #distance input:focus {
+  outline: none;
+}
+.modal-content #distance button {
+  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content #distance button:focus {
+  outline: none;
+}
+.modal-content .sign-in label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content .sign-in input {
+  height: 45px;
+  width: 80%;
+  border-radius: 8px;
+  margin: 5px 0px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 18px;
+}
+.modal-content .sign-in input:focus {
+  outline: none;
+}
+.modal-content .sign-in button {
+  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content .sign-in button:focus {
+  outline: none;
+}
+.modal-content .sign-up label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content .sign-up input {
+  height: 45px;
+  width: 80%;
+  border-radius: 8px;
+  margin: 5px 0px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 18px;
+}
+.modal-content .sign-up input:focus {
+  outline: none;
+}
+.modal-content .sign-up button {
+  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-content .sign-up button:focus {
+  outline: none;
 }
 
 .closeBtn {
@@ -274,9 +332,7 @@ button:hover {
 
 .modal {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -289,20 +345,14 @@ button:hover {
 
 #register {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: AvenirNext-Bold;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0px;
   padding: 0px;
-  height: 100px;
-  margin-top: 25px !important;
+  height: 240px;
+  margin-top: 300px !important;
 }
 
 .register-left {
@@ -381,15 +431,11 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
   #inner-working {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
   #map-container {
     width: 100vw;
   }
@@ -438,7 +484,6 @@ button:hover {
     height: 45px;
   }
 }
-
 @media screen and (max-width: 960px) {
   #map-container {
     width: 100vw;
@@ -452,11 +497,11 @@ button:hover {
   #map-container #distance-drop {
     width: 49%;
   }
+
   .truck-dropdown {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 760px) {
   #main-header {
     height: 50px;
@@ -468,17 +513,21 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
+  #main-header .header-btn {
+    padding: 0px;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 5px;
+    width: 80px;
+  }
+
   #inner-working {
     padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
   #map-container {
     width: 100vw;
     border-radius: 0px;
@@ -496,25 +545,24 @@ button:hover {
   #map-container #address-input button {
     width: 25%;
   }
+
   .modal-content {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-            box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-    -webkit-animation-name: modal-render;
-            animation-name: modal-render;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    animation-name: modal-render;
+    animation-duration: 1s;
   }
+
   .closeBtn {
     font-size: 4em;
   }
+
   button:hover {
-    opacity: 1.0;
+    opacity: 1;
   }
 }
-
 @media screen and (max-width: 600px) {
   #main-header {
     height: 50px;
@@ -526,17 +574,14 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
+
   #inner-working {
     padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
   #map-container {
     width: 100vw;
     border-radius: 0px;
@@ -564,20 +609,11 @@ button:hover {
   #map-container #food-filter {
     padding: 20px;
   }
-  button:hover {
-    opacity: 1.0;
-  }
-}
 
-@-webkit-keyframes modal-render {
-  from {
-    opacity: 0;
-  }
-  to {
+  button:hover {
     opacity: 1;
   }
 }
-
 @keyframes modal-render {
   from {
     opacity: 0;
@@ -586,144 +622,10 @@ button:hover {
     opacity: 1;
   }
 }
-
-
-#aboutus{
-
-  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
-  display: flex;
-  font-family: 'Open Sans', sans-serif;
-  margin: 0px;
-  padding: 0px;
-  height: 100px;
-  margin-top: 25px !important;
-}
-
-.heading-title {
-  margin-bottom: 100px;
-}
-.text-center {
-  text-align: center;
-}
-.heading-title h3 {
-  margin-bottom: 0;
-  letter-spacing: 2px;
-  font-weight: normal;
-  color: #003845;
-}
-.p-top-30 {
-  padding-top: 30px;
-  font-size: 18px;
-}
-.half-txt {
-  width: 60%;
-  margin: 0 auto;
-  display: inline-block;
-  line-height: 25px;
-  color: #003845;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.team-member, .team-member .team-img {
-  position: relative;
-}
-.team-member {
-  overflow: hidden;
-}
-.team-member, .team-member .team-img {
-  position: relative;
-}
-
-.team-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  border: 20px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.90);
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.team-member:hover .team-hover .desk {
-  top: 35%;
-}
-.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
-  opacity: 1;
-}
-.team-hover .desk {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transform: translateY(-55%);
-  -ms-transform: translateY(-55%);
-  transform: translateY(-55%);
-  -webkit-transition: all 0.3s 0.2s;
-  transition: all 0.3s 0.2s;
-  padding: 0 20px;
-}
-.desk, .desk h4, .team-hover .s-link a {
-  text-align: center;
-  color: #003845;
-}
-.team-member:hover .team-hover .s-link {
-  bottom: 10%;
-}
-.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
-  opacity: 1;
-}
-.team-hover .s-link {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-  text-align: center;
-  -webkit-transform: translateY(45%);
-  -ms-transform: translateY(45%);
-  transform: translateY(45%);
-  -webkit-transition: all 0.3s 0.2s;
-  transition: all 0.3s 0.2s;
-  font-size: 35px;
-}
-.desk, .desk h4, .team-hover .s-link a {
-  text-align: center;
-  color:#003845;
-}
-.team-member .s-link a {
-  margin: 0 10px;
-  color: #333;
-  font-size: 16px;
-}
-.team-title {
-  position: static;
-  padding: 20px 0;
-  display: inline-block;
-  letter-spacing: 2px;
-  width: 100%;
-}
-.team-title h5 {
-  margin-bottom: 0px;
-  display: block;
-  text-transform: uppercase;
-  color: #003845;
-}
-.team-title span {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #003845;
-  letter-spacing: 1px;
-}
-
 #log-in-modal form, #sign-up-modal form {
   display: block;
   margin: 10px auto;
 }
-
 #log-in-modal form input, #sign-up-modal form input {
   display: block;
 }
@@ -732,21 +634,16 @@ button:hover {
   position: fixed;
   right: 0px;
   top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   background: #FFF;
   z-index: 2000;
   width: 30vh;
   display: none;
 }
-
 .account-menu button {
   margin-top: 20px;
 }
 
+/*# sourceMappingURL=style.css.map */
