@@ -506,11 +506,11 @@ button:hover{
     #map-container{
         width:100vw;
         #map{
-            width:100%;
+            width:50%;
             height:40vh;
         }
         #food-filter{
-            width:100%;
+            width:50%;
             display:block;
         
             #address-input{
@@ -573,7 +573,15 @@ button:hover{
     }
     #map-container{
         width:100vw;
-        
+        flex-wrap:wrap;
+        #map{
+            width:100%;
+            height:40vh;
+        }
+        #food-filter{
+            width:100%;
+            display:block;
+        }
         #address-input{
         width:100%;
     }
