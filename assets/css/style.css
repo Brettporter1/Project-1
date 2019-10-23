@@ -15,6 +15,10 @@ button:hover {
   opacity: 0.8;
 }
 
+button:focus {
+  outline: none;
+}
+
 #main-header {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
@@ -41,7 +45,7 @@ button:hover {
   color: #003845;
   height: auto;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 42px;
   margin: 10px;
   width: 120px;
@@ -50,6 +54,49 @@ button:hover {
   background: #003845;
   color: #fff;
   transition: 0.3s;
+}
+#main-header #user-drop {
+  position: absolute;
+  right: 25px;
+}
+#main-header #user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #003845;
+  cursor: pointer;
+}
+#main-header #user-info h2 {
+  margin: 15px;
+  font-family: "Luckiest Guy", "Open Sans", sans-serif;
+}
+#main-header #user-logout {
+  color: #003845;
+}
+#main-header #user-logout:hover {
+  color: #fff;
+  cursor: pointer;
+}
+#main-header #user-drop-content {
+  display: none;
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  opacity: 0.9;
+  padding: 0px;
+  top: 40px;
+}
+#main-header #user-info:hover {
+  color: #fff;
+}
+#main-header #user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 #inner-working {
@@ -178,7 +225,8 @@ button:hover {
   opacity: 0.9;
 }
 
-.truck-dropdown {
+
+/* .truck-dropdown {
   width: 50%;
 }
 
@@ -194,16 +242,19 @@ button:hover {
   display: block;
   position: absolute;
   z-index: 100;
-}
+} */
 
 .drop-content {
   display: none;
+  position: absolute;
   font-family: "Open Sans", sans-serif;
+  text-align: center;
   width: 100%;
   color: #fff;
-  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  background: transparent;
   opacity: 0.9;
-  padding: 10px;
+  padding: 0px;
+  top: 70px;
 }
 .drop-content p {
   margin: 0px;
@@ -485,6 +536,22 @@ button:hover {
   }
 }
 @media screen and (max-width: 960px) {
+  #main-header {
+    background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    height: 240px;
+  }
+  #main-header .logo {
+    height: 70%;
+    position: relative;
+    left: 25px;
+  }
+
   #map-container {
     width: 100vw;
   }
@@ -501,6 +568,7 @@ button:hover {
   .truck-dropdown {
     width: 100%;
   }
+
 }
 @media screen and (max-width: 760px) {
   #main-header {
@@ -513,12 +581,24 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
+
+  #main-header #user-info {
+    flex-direction: column;
+  }
+  #main-header #user-info h2 {
+    font-size: 1.2em;
+  }
+  #main-header #user-image {
+    width: 50px;
+    height: 50px;
+
   #main-header .header-btn {
     padding: 0px;
     font-size: 12px;
     line-height: 24px;
     margin: 5px;
     width: 80px;
+
   }
 
   #inner-working {

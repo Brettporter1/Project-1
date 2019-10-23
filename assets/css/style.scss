@@ -16,6 +16,9 @@ body{
 button:hover{
     opacity: 0.8;
 }
+button:focus{
+    outline: none;
+}
 #main-header{
     background:$orange-background;
     width:100vw;
@@ -41,7 +44,7 @@ button:hover{
         color:#003845;
         height:auto;
         border-radius:30px;
-        font-size:14px;
+        font-size:16px;
         line-height:42px;
         margin:10px;
         width:120px
@@ -51,6 +54,51 @@ button:hover{
         color:#fff;
         transition: 0.3s;
     }
+
+    #user-drop{
+        position:absolute;
+        right:25px;
+    }
+    #user-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color:#003845;
+        cursor: pointer;
+        h2{
+            margin:15px;
+            font-family:'Luckiest Guy', 'Open Sans', sans-serif;
+        }
+    }
+    #user-logout{
+        color:#003845;
+    }
+    #user-logout:hover{
+        color:#fff;
+        cursor: pointer;
+    }
+    #user-drop-content{
+        display:none;
+    position:absolute;
+    font-family: $main-font;
+    text-align:center;
+    width:100%;
+    color:#fff;
+    background:transparent;
+    opacity: 0.9;
+    padding:0px;
+    top:40px;
+    }
+    #user-info:hover{
+        color:#fff;
+    }
+    #user-image{
+        width:70px;
+        height:70px;
+        border-radius:50%;
+    }
+
 } 
 #inner-working{
     padding:0px;
@@ -150,7 +198,7 @@ button:hover{
     width:100%;
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-top: 5px;
 }
@@ -162,7 +210,7 @@ button:hover{
     align-items: flex-start;
     font-family: $main-font;
     color:#fff;
-    width:100%;
+    width:50%;
     text-align:left;
     font-size:24px;
     height:125px;
@@ -178,32 +226,17 @@ button:hover{
     opacity:0.9;
 }
 
-.truck-dropdown{
-    width:50%;
-}
-.inactive{
-    .drop-content{
-        display:none;
-    }
-}
-.active{
-    button{
-        border-bottom-left-radius: 0px!important;
-        border-bottom-right-radius: 0px!important;}
-    .drop-content{
-        display:block;
-        position:absolute;
-        z-index:100;
-    }
-}
 .drop-content{
     display:none;
+    position:absolute;
     font-family: $main-font;
+    text-align:center;
     width:100%;
     color:#fff;
-    background:$orange-background;
+    background:transparent;
     opacity: 0.9;
-    padding:10px;
+    padding:0px;
+    top:70px;
     p{
         margin:0px;
     }
@@ -504,6 +537,22 @@ button:hover{
     }
 }
 @media screen and (max-width:960px){
+    #main-header{
+        background:$orange-background;
+        width:100vw;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin:0px;
+        padding:0px;
+        height:240px;
+        .logo{
+            height:70%;
+            position:relative;
+            left:25px;
+        }
+        
+    }
     #map-container{
         width:100vw;
         
@@ -518,7 +567,7 @@ button:hover{
     }
 }
    
-    .truck-dropdown{
+    .food-truck{
         width:100%;
     }
 }
@@ -532,6 +581,17 @@ button:hover{
             font-size: 30px;
             line-height:26px;
         }
+
+        #user-info{
+            flex-direction: column;
+            h2{
+                font-size:1.2em;
+            }
+        }
+        #user-image{
+            width:50px;
+            height:50px;
+
         .header-btn{
             padding: 0px;
             font-size: 12px;
