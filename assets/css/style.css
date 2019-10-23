@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,400,600,700&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -8,7 +9,7 @@ body {
   position: relative;
   margin: 0px;
   padding: 0px;
-  background: #333;
+  background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
 }
 
 button:hover {
@@ -22,21 +23,30 @@ button:focus {
 #main-header {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px;
   padding: 0px 20px;
   height: 70px;
 }
+
 #main-header .logo {
   height: 50px;
   margin-right: auto;
 }
+
 #main-header .header-account-btn {
   display: none;
 }
-#main-header .header-btn {
+
+#main-header .header-btn, #main-header .header-account-btn {
   background: transparent;
   border: 2px solid #003845;
   padding: 0px 15px;
@@ -45,39 +55,55 @@ button:focus {
   color: #003845;
   height: auto;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 42px;
   margin: 10px;
-  width: 120px;
 }
+
 #main-header .header-btn:hover, #main-header .header-btn:focus {
   background: #003845;
   color: #fff;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 #main-header #user-drop {
   position: absolute;
   right: 25px;
 }
+
 #main-header #user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #003845;
   cursor: pointer;
 }
+
 #main-header #user-info h2 {
   margin: 15px;
-  font-family: "Luckiest Guy", "Open Sans", sans-serif;
+  font-family: 'Luckiest Guy', 'Open Sans', sans-serif;
 }
+
 #main-header #user-logout {
   color: #003845;
 }
+
 #main-header #user-logout:hover {
   color: #fff;
   cursor: pointer;
 }
+
 #main-header #user-drop-content {
   display: none;
   position: absolute;
@@ -90,9 +116,11 @@ button:focus {
   padding: 0px;
   top: 40px;
 }
+
 #main-header #user-info:hover {
   color: #fff;
 }
+
 #main-header #user-image {
   width: 70px;
   height: 70px;
@@ -101,41 +129,61 @@ button:focus {
 
 #inner-working {
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #map-container {
   position: relative;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px;
 }
+
 #map-container #map {
   width: 50%;
-  background: #333;
   height: 35vw;
 }
+
 #map-container #food-filter {
   width: 50%;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
+
 #map-container #food-filter #address-input {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   top: 15px;
   margin-bottom: 15px;
   height: 45px;
   width: 100%;
 }
+
 #map-container #food-filter #address-input input {
   width: 100%;
   border-top-left-radius: 8px;
@@ -146,6 +194,7 @@ button:focus {
   margin: 0px;
   padding: 0px 0px 0px 15px;
 }
+
 #map-container #food-filter #address-input button {
   width: 25%;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
@@ -161,6 +210,7 @@ button:focus {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
 #map-container #food-filter #food-style-drop {
   position: relative;
   margin: 0px 0px 0px;
@@ -175,6 +225,7 @@ button:focus {
   width: 100%;
   height: 45px;
 }
+
 #map-container #food-filter #distance-drop {
   position: relative;
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
@@ -192,19 +243,38 @@ button:focus {
 
 #truck-list {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-top: 5px;
+}
+
+#truck-list > p {
+  text-align: center;
+  margin: 10px auto;
+  color: #FFF;
 }
 
 .food-truck {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   padding: 20px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   width: 100%;
@@ -218,31 +288,12 @@ button:focus {
 }
 
 .distance-away {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button:hover {
   opacity: 0.9;
 }
-
-
-/* .truck-dropdown {
-  width: 50%;
-}
-
-.inactive .drop-content {
-  display: none;
-}
-
-.active button {
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-.active .drop-content {
-  display: block;
-  position: absolute;
-  z-index: 100;
-} */
 
 .drop-content {
   display: none;
@@ -256,6 +307,7 @@ button:hover {
   padding: 0px;
   top: 70px;
 }
+
 .drop-content p {
   margin: 0px;
 }
@@ -267,20 +319,32 @@ button:hover {
   color: #fff;
   width: 700px;
   margin: 0 auto;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  animation-name: modal-render;
-  animation-duration: 1s;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-animation-name: modal-render;
+          animation-name: modal-render;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
+
 .modal-content #distance {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .modal-content #distance label {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content #distance input {
   height: 45px;
   width: 50%;
@@ -291,9 +355,11 @@ button:hover {
   padding: 10px;
   font-size: 18px;
 }
+
 .modal-content #distance input:focus {
   outline: none;
 }
+
 .modal-content #distance button {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
@@ -304,14 +370,17 @@ button:hover {
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content #distance button:focus {
   outline: none;
 }
+
 .modal-content .sign-in label {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content .sign-in input {
   height: 45px;
   width: 80%;
@@ -322,9 +391,11 @@ button:hover {
   padding: 10px;
   font-size: 18px;
 }
+
 .modal-content .sign-in input:focus {
   outline: none;
 }
+
 .modal-content .sign-in button {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
@@ -335,14 +406,17 @@ button:hover {
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content .sign-in button:focus {
   outline: none;
 }
+
 .modal-content .sign-up label {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content .sign-up input {
   height: 45px;
   width: 80%;
@@ -353,9 +427,11 @@ button:hover {
   padding: 10px;
   font-size: 18px;
 }
+
 .modal-content .sign-up input:focus {
   outline: none;
 }
+
 .modal-content .sign-up button {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   color: #fff;
@@ -366,6 +442,7 @@ button:hover {
   font-size: 18px;
   font-weight: 700;
 }
+
 .modal-content .sign-up button:focus {
   outline: none;
 }
@@ -383,7 +460,9 @@ button:hover {
 
 .modal {
   display: none;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -396,10 +475,16 @@ button:hover {
 
 #register {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: AvenirNext-Bold;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px;
   padding: 0px;
   height: 240px;
@@ -482,11 +567,15 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
   #inner-working {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
   }
@@ -535,13 +624,20 @@ button:hover {
     height: 45px;
   }
 }
+
 @media screen and (max-width: 960px) {
   #main-header {
     background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 0px;
     padding: 0px;
     height: 240px;
@@ -551,7 +647,6 @@ button:hover {
     position: relative;
     left: 25px;
   }
-
   #map-container {
     width: 100vw;
   }
@@ -564,12 +659,11 @@ button:hover {
   #map-container #distance-drop {
     width: 49%;
   }
-
-  .truck-dropdown {
+  .food-truck {
     width: 100%;
   }
-
 }
+
 @media screen and (max-width: 760px) {
   #main-header {
     height: 50px;
@@ -581,9 +675,11 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
-
   #main-header #user-info {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #main-header #user-info h2 {
     font-size: 1.2em;
@@ -591,23 +687,25 @@ button:hover {
   #main-header #user-image {
     width: 50px;
     height: 50px;
-
+  }
   #main-header .header-btn {
     padding: 0px;
     font-size: 12px;
     line-height: 24px;
     margin: 5px;
     width: 80px;
-
   }
-
   #inner-working {
     padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
     border-radius: 0px;
@@ -625,24 +723,25 @@ button:hover {
   #map-container #address-input button {
     width: 25%;
   }
-
   .modal-content {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-    animation-name: modal-render;
-    animation-duration: 1s;
+    -webkit-box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-animation-name: modal-render;
+            animation-name: modal-render;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
-
   .closeBtn {
     font-size: 4em;
   }
-
   button:hover {
-    opacity: 1;
+    opacity: 1.0;
   }
 }
+
 @media screen and (max-width: 600px) {
   #main-header {
     height: 50px;
@@ -654,14 +753,17 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
-
   #inner-working {
     padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   #map-container {
     width: 100vw;
     border-radius: 0px;
@@ -689,11 +791,20 @@ button:hover {
   #map-container #food-filter {
     padding: 20px;
   }
-
   button:hover {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes modal-render {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
+
 @keyframes modal-render {
   from {
     opacity: 0;
@@ -702,11 +813,17 @@ button:hover {
     opacity: 1;
   }
 }
-#log-in-modal form, #sign-up-modal form {
+
+.modal form {
   display: block;
   margin: 10px auto;
 }
-#log-in-modal form input, #sign-up-modal form input {
+
+.modal form input {
+  display: block;
+}
+
+.modal form label {
   display: block;
 }
 
@@ -714,16 +831,43 @@ button:hover {
   position: fixed;
   right: 0px;
   top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   background: #FFF;
   z-index: 2000;
   width: 30vh;
   display: none;
-}
-.account-menu button {
-  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
 }
 
+.account-menu button {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #003845;
+  padding: 0px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #003845;
+  height: auto;
+  border-radius: 30px;
+  font-size: 12px;
+  line-height: 42px;
+  margin: 10px;
+}
+
+.account-menu #close-account-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@ body{
     position:relative;
     margin: 0px;
     padding:0px;
-    background:#333;
+    background: $blue-background;
 }
 button:hover{
     opacity: 0.8;
@@ -35,7 +35,7 @@ button:focus{
     .header-account-btn{
         display: none;
     }
-    .header-btn{
+    .header-btn, .header-account-btn{
         background: transparent;
         border: 2px solid #003845;
         padding: 0px 15px;
@@ -44,10 +44,10 @@ button:focus{
         color:#003845;
         height:auto;
         border-radius:30px;
-        font-size:16px;
+        font-size:12px;
         line-height:42px;
         margin:10px;
-        width:120px
+        // width:120px
     }
     .header-btn:hover, .header-btn:focus{
         background:#003845;
@@ -112,11 +112,9 @@ button:focus{
         display:flex;
         flex-wrap:wrap;
         justify-content: space-between;
-        background: $blue-background;
         padding:0px;
         #map{
             width:50%;
-            background:#333;
             height:35vw;
         }
         #food-filter{
@@ -201,16 +199,22 @@ button:focus{
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 5px;
+
+    & > p{
+        text-align: center;
+        margin: 10px auto;
+        color: #FFF;
+    }
 }
 .food-truck{
     background:$orange-background;
     padding:20px;
-    display:inline-flex;
+    display:flex;
     justify-content: space-between;
     align-items: flex-start;
     font-family: $main-font;
     color:#fff;
-    width:50%;
+    width:100%;
     text-align:left;
     font-size:24px;
     height:125px;
@@ -591,7 +595,7 @@ button:hover{
         #user-image{
             width:50px;
             height:50px;
-
+        }
         .header-btn{
             padding: 0px;
             font-size: 12px;
@@ -702,11 +706,14 @@ button:hover{
 
 ///forms
 
-#log-in-modal, #sign-up-modal {
+.modal{
     form{
         display: block;
         margin: 10px auto;
         input{
+            display: block;
+        }
+        label{
             display: block;
         }
     }
@@ -726,8 +733,30 @@ button:hover{
     z-index: 2000;
     width: 30vh;
     display: none;
+    padding: 20px;
+    background: $orange-background;
     button{
         margin-top: 20px;
+        background: transparent;
+        border: 2px solid #003845;
+        padding: 0px 15px;
+        font-family:$main-font;
+        font-weight:700;
+        color:#003845;
+        height:auto;
+        border-radius:30px;
+        font-size:12px;
+        line-height:42px;
+        margin:10px;
+        
+    }
+    #close-account-button{
+        border:none;
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+        margin-bottom: 50px;
+        font-size: 50px;
     }
 
 }
