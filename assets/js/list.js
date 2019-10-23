@@ -41,6 +41,17 @@ function queryTrucks() {
       listing.appendChild(distance);
 
       console.log(distance.textContent);
+
+      listing.addEventListener('click', () => {
+        $('#truck-modal .ft-content').empty();
+        $('#truck-modal').css('display', 'block');
+        const foodtruckHTML = `
+        <h2>${doc.data().name}</h2>
+        <p>${doc.data().description}</p>
+        <p>${doc.data().foodTypes}</p>
+        `;
+        $('#truck-modal .ft-content').append(foodtruckHTML);
+      });
       const icon = {
         url: './assets/images/MT_truck_marker-01.svg', // url
         scaledSize: new google.maps.Size(50, 50), // scaled size

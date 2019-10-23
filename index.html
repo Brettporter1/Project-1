@@ -9,14 +9,14 @@
     <title>Motha Truckers</title>
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    
+
 </head>
 
 <body>
     <header id="main-header">
         <img src="./assets/images/MotherTruckers_Logo.png" class="logo">
 
-<!--         <div id="user-drop"><div id="user-info">
+        <!--         <div id="user-drop"><div id="user-info">
             <img id="user-image" src="https://via.placeholder.com/150.png">
             <h2 id="user-name">user-name</h2>
         </div>
@@ -33,9 +33,10 @@
 
     </header>
     <div class="account-menu">
-        <button id="close-account-button">X</button>
-        <button class="fav-btn">My Favorites</button>
-        <button class="set my location">Set Location</button>
+        <button id="close-account-button">&times</button>
+        <!-- <button class="fav-btn">My Favorites</button> -->
+        <button class="add-truck">Add Your Truck</button>
+        <!-- <button class="set my location">Set Location</button> -->
         <button class="sign-out-button">Sign Out</button>
     </div>
 
@@ -68,8 +69,8 @@
             <span class="closeBtn">&times;</span>
             <h2>How far are you willing to go?</h2>
 
-            
-<!--         </div>
+
+            <!--         </div>
     </div>
     <div id="truck-modal">
         <div class="modal-content">
@@ -90,13 +91,19 @@
     <div id="add-truck-modal" class="modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
+            <h2>Add your Truck</h2>
             <form id="add-truck" action="#">
                 <label for="truck-name">Truck Name</label>
                 <input id="truck-name" type="text">
+                <label for="truck-description">Description</label>
+                <textarea id="truck-description" cols="30" rows="10"></textarea>
+                <label for="truck-foods">Types of food</label>
+                <input id="truck-foods" type="text">
                 <label for="truck-lat">Latitude</label>
                 <input id="truck-lat" type="text">
                 <label for="truck-lng">Longitude</label>
                 <input id="truck-lng" type="text">
+                <button id="use-location">Use Current Location</button>
                 <button type="submit">Add</button>
             </form>
         </div>
@@ -105,6 +112,7 @@
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
             <h2>Food Truck</h2>
+            <div class="ft-content"></div>
         </div>
     </div>
 
