@@ -36,10 +36,23 @@ button:focus{
         display: none;
     }
     .header-btn{
-        background: #FFF;
-        border: none;
-        padding: 5px 10px;
-        border-radius:3px;
+        background: transparent;
+        border: 2px solid #003845;
+        padding: 0px 15px;
+        font-family:$main-font;
+        font-weight:700;
+        color:#003845;
+        height:auto;
+        border-radius:30px;
+        font-size:16px;
+        line-height:42px;
+        margin:10px;
+        width:120px
+    }
+    .header-btn:hover, .header-btn:focus{
+        background:#003845;
+        color:#fff;
+        transition: 0.3s;
     }
 
     #user-drop{
@@ -203,7 +216,6 @@ button:focus{
     height:125px;
     letter-spacing: 1px;
     border:none;
-    font-family: 'Luckiest Guy','Open Sans', sans-serif;
     margin: 5px 10px;
     border-radius: 5px;
 }
@@ -241,6 +253,108 @@ button:hover{
     box-shadow:0 5px 12px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.15);
     animation-name:modal-render;
     animation-duration:1s;
+    #distance{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        label{
+            font-family:$main-font;
+            font-size:18px;
+            font-weight:700;
+        }
+        input{
+            height:45px;
+            width:50%;
+            border-radius:8px;
+            margin:10px;
+            font-family:$main-font;
+            font-weight:700;
+            padding:10px;
+            font-size:18px;
+        }
+        input:focus{
+            outline:none;
+        }
+        button{
+            background:$orange-background;
+            color:#fff;
+            border:none;
+            border-radius:8px;
+            height:45px;
+            padding:5px 15px;
+            font-size:18px;
+            font-weight:700;
+        }
+        button:focus{
+            outline:none;
+        }
+    }
+    .sign-in{
+        label{
+            font-family:$main-font;
+            font-size:18px;
+            font-weight:700;
+        }
+        input{
+            height:45px;
+            width:80%;
+            border-radius:8px;
+            margin:5px 0px 15px;
+            font-family:$main-font;
+            font-weight:700;
+            padding:10px;
+            font-size:18px;
+        }
+        input:focus{
+            outline:none;
+        }
+        button{
+            background:$orange-background;
+            color:#fff;
+            border:none;
+            border-radius:8px;
+            height:45px;
+            padding:5px 15px;
+            font-size:18px;
+            font-weight:700;
+        }
+        button:focus{
+            outline:none;
+        }
+    }
+    .sign-up{
+        label{
+            font-family:$main-font;
+            font-size:18px;
+            font-weight:700;
+        }
+        input{
+            height:45px;
+            width:80%;
+            border-radius:8px;
+            margin:5px 0px 15px;
+            font-family:$main-font;
+            font-weight:700;
+            padding:10px;
+            font-size:18px;
+        }
+        input:focus{
+            outline:none;
+        }
+        button{
+            background:$orange-background;
+            color:#fff;
+            border:none;
+            border-radius:8px;
+            height:45px;
+            padding:5px 15px;
+            font-size:18px;
+            font-weight:700;
+        }
+        button:focus{
+            outline:none;
+        }
+    }
 }
 
 .closeBtn{
@@ -467,6 +581,7 @@ button:hover{
             font-size: 30px;
             line-height:26px;
         }
+
         #user-info{
             flex-direction: column;
             h2{
@@ -476,6 +591,13 @@ button:hover{
         #user-image{
             width:50px;
             height:50px;
+
+        .header-btn{
+            padding: 0px;
+            font-size: 12px;
+            line-height: 24px;
+            margin: 5px;
+            width: 80px;
         }
     }
     #inner-working{
