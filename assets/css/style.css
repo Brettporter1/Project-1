@@ -23,7 +23,11 @@ button:focus {
   background: linear-gradient(174deg, #DEAD30 0%, #E28B31 77%, #E37E31 100%);
   width: 100vw;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0px;
   padding: 0px 20px;
@@ -110,7 +114,12 @@ button:focus {
   position: relative;
   width: 100vw;
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background: linear-gradient(162deg, #00A7CD 0%, #003845 100%);
   padding: 0px;
@@ -123,8 +132,12 @@ button:focus {
 #map-container #food-filter {
   width: 50%;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-line-pack: center;
   align-content: center;
 }
 #map-container #food-filter #address-input {
@@ -193,9 +206,14 @@ button:focus {
 #truck-list {
   width: 100%;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  padding-top: 5px;
   padding-top: 5px;
 }
 
@@ -224,25 +242,6 @@ button:focus {
 button:hover {
   opacity: 0.9;
 }
-
-
-/* .truck-dropdown {
-  width: 50%;
-}
-
-.inactive .drop-content {
-  display: none;
-}
-
-.active button {
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-.active .drop-content {
-  display: block;
-  position: absolute;
-  z-index: 100;
-} */
 
 .drop-content {
   display: none;
@@ -544,7 +543,7 @@ button:hover {
     justify-content: flex-start;
     margin: 0px;
     padding: 0px;
-    height: 240px;
+    height: 70px;
   }
   #main-header .logo {
     height: 70%;
@@ -565,10 +564,9 @@ button:hover {
     width: 49%;
   }
 
-  .truck-dropdown {
+  .food-truck {
     width: 100%;
   }
-
 }
 @media screen and (max-width: 760px) {
   #main-header {
@@ -581,7 +579,6 @@ button:hover {
     font-size: 30px;
     line-height: 26px;
   }
-
   #main-header #user-info {
     flex-direction: column;
   }
@@ -591,14 +588,13 @@ button:hover {
   #main-header #user-image {
     width: 50px;
     height: 50px;
-
-  #main-header .header-btn {
+  }
+  #main-header #user-image .header-btn {
     padding: 0px;
     font-size: 12px;
     line-height: 24px;
     margin: 5px;
     width: 80px;
-
   }
 
   #inner-working {
