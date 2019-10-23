@@ -42,7 +42,7 @@ $(window).on('click', function(event) {
   }
 });
 $(document).on('click','.food-truck', function() {
-  $('#truck-modal').css('display', 'block');
+  $('#truck-modal').css('display', 'flex');
 });
 
 $(document).on('click','.closeBtn', function() {
